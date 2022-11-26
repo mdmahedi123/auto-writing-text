@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  height: 70vh;
+  background: tomato;
+  position: relative;
+}
+.child {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: red;
+  animation: color-change 2s linear infinite, kick 5s linear infinite;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+@keyframes kick {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  25% {
+    left: 100vw;
+    top: 0;
+  }
+  50% {
+    left: 100vw;
+    top: 70vh;
+  }
+  75% {
+    left: 0;
+    top: 70vh;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
